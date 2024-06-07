@@ -39,8 +39,15 @@ class MainProgram
 
             else if (response == "division")
             {
-                result = divide(number1, number2);
-                Console.WriteLine("Votre résultat est : " + result);
+                if (number2 == null)
+                {
+                    Console.WriteLine("Vous ne pouvez pas diviser par zero. ");
+                }
+                else
+                {
+                    result = divide(number1, number2);
+                    Console.WriteLine("Votre résultat est : " + result);
+                }
             }
             else if (response == "modulo")
             {
